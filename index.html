@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Black+Ops+One&family=Hind+Madurai:wght@300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxanium:wght@200..800&family=Poiret+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <audio id="sfx" src="button-124476.mp3" preload="auto"></audio>
+    <!--Home-->
+    <h1 id="name">Aim Frenzy</h1>
+    <div id="play" class="section">
+        <h2 id="timer">60</h2>
+        <div class="game">
+            <h2 id="score">0</h2>
+            <button id="target" onclick="PositionCords()"></button>
+        </div>
+    </div>
+    <!--Home-->
+    <!--Settings-->
+    <div id="settings" class="section">
+        <div class="option1">
+            <h2>Color Of Cube/</h2>
+            <input id="ColorOfCube" type="text" placeholder="rgb(255,255,255)" autocomplete="off">
+            <button onclick="SetColorOfCube()">Set</button>
+        </div>
+        <div class="option3">
+            <h2>Cursor Type/</h2>
+            <button id="Cursor1" onclick="CursorChange('CursorRedSVG1.svg')"></button>
+            <button id="Cursor2" onclick="CursorChange('CursorRedSVG2.svg')"></button>
+            <button id="Cursor3" onclick="CursorChange('CursorRedSVG3.svg')"></button>
+        </div>
+        <div class="option4">
+            <h2>SFX/</h2>
+            <button onclick="sfxChange(false)">Off</button>
+            <button onclick="sfxChange(true)">On</button>
+        </div>
+    </div>
+    <!--Settings-->
+    <div class="buttons">
+        <button onclick="showSection('settings')">settings</button>
+        <button onclick="showSection('play')">play</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
